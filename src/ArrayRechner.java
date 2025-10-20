@@ -27,6 +27,42 @@ public class ArrayRechner {
     }
 
     // Finden Sie die maximale Summe von n-1 Zahlen.
+    public static long findMaxSum(int[] arr) {
+        if (arr == null || arr.length == 0)
+            throw new IllegalArgumentException("Das Array darf nicht null oder leer sein.");
+
+        if (arr.length == 1)
+            return 0;
+
+        long summe = 0;
+        int min = arr[0];
+
+        for (int i : arr) {
+            summe += i;
+            if (i < min)
+                min = i;
+        }
+
+        return summe - min;
+    }
 
     // Finden Sie die minimale Summe von n-1 Zahlen.
+    public static long findMinSum(int[] arr) {
+        if (arr == null || arr.length == 0)
+            throw new IllegalArgumentException("Das Array darf nicht null oder leer sein.");
+
+        if (arr.length == 1)
+            return 0;
+
+        long summe = 0;
+        int max = arr[0];
+
+        for (int i : arr) {
+            summe += i;
+            if (i > max)
+                max = i;
+        }
+
+        return summe - max;
+    }
 }

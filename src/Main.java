@@ -11,5 +11,11 @@ public class Main {
 
         // aufgabe 2
         System.out.println("Aufgabe 2 - Minimale Zahl: " + ArrayRechner.findMin(zahlen));
+
+        // aufgabe 3
+        System.out.println("Aufgabe 3 - Maximale Summe (n-1): " + ArrayRechner.findMaxSum(zahlen));
+
+        // aufgabe 4
+        System.out.println("Aufgabe 4 - Minimale Summe (n-1): " + ArrayRechner.findMinSum(zahlen));
     }
 }
